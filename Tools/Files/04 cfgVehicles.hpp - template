@@ -1,0 +1,21 @@
+//====================================================================================================
+// cfgVehicles template
+
+//notes class Parent Names // class names of parent classes used for custom classes
+class parent_class1; // all entries should end in ;
+class parent_class2;
+class parent_class3;
+====================================================================================================
+//notes Custom Classes (item_type) // not actual code, just used for organization (e.g. Uniform, Backpack, Vest)
+class class_name_1: parent_class1
+{
+	item stuff
+};
+class class_name_2: parent_class2
+{
+	item stuff
+};
+class class_name_3: parent_class3
+{
+	item stuff
+};

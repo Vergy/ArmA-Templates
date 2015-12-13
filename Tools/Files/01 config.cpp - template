@@ -1,0 +1,26 @@
+//====================================================================================================
+// config.cpp template
+
+class cfgPatches
+{
+    #include "cfgPatches.hpp"
+};
+
+class cfgMods
+{
+	#include "cfgMods.hpp"
+};
+
+class cfgVehicles
+{
+	#include "cfgVehicles.hpp"
+};
+
+class cfgWeapons
+{
+	#include "cfgWeapons.hpp"
+};
+class cfgUnitInsignia
+{
+	#include "cfgUnitInsignia.hpp"
+}:

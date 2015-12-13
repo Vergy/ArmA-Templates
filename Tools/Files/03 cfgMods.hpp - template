@@ -1,0 +1,22 @@
+//====================================================================================================
+// cfgMods.hpp template
+
+class parent_class // easy to just name the class mod_base
+
+class name_of_mod: parent_class
+{
+	author = "your_name_here";
+	name = "name_of_mod";
+	picture = "path to image in .paa format"; // shown in Expansion Menu (512x256px)
+	logo = "path to image in .paa format"; // logo displayed on Main Menu (128x128px)
+	logoOver = "path to image in .paa format"; // logo displayed when hovering over logo (128x128px)
+	logoSmall = "path to image in .paa format"; // logo displayed next to item in Virtual Arsenal (64x64px)
+	action = "url address"; // url to website of your mod/group/forum
+	actionName = "name"; // shown in Expansion Menu and links to action above
+	tooltip = "something"; // displayed when hovering over logo in Main Menu
+	tooltipOwned = "something"; // displayed when hovering over logo in Main Menu
+	description = "version info";
+	overview = "short summary of mod"; // shown in Expansion Menu
+};
+
+// put this in your mod folder and in all your item properties you will put - dlc = "name_of_mod";

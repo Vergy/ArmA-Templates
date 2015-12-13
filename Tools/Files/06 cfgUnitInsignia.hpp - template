@@ -1,0 +1,9 @@
+//====================================================================================================
+// cfgUnitInsignia template
+
+class name_of_class
+{
+    displayName = "Name that shows up in Virtual Arsenal";
+    author = "your name here";
+    texture = "path to icon for item in .paa format";
+};

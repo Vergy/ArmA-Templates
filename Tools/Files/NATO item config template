@@ -1,0 +1,235 @@
+Simply copy and paste the code that you need to use for the item you are trying to create.
+
+====================================================================================================
+NATO UNIFORM
+--------------------
+(put in cfgVehicles)
+class your_class_name_F: B_Story_SF_Captain_F // don't forget to put the _F at the end of your class name
+{
+	author = "your name here";
+	scope = 2;
+	scopeArsenal = 2;
+	dlc = "name of dlc"; // read cfgMods.hpp - template for more info
+	displayName = "name that shows up in Virtual Arsenal";
+	model = "\A3\characters_F\BLUFOR\b_soldier_03.p3d"; // rolled sleeved version
+	model = "\A3\characters_F\BLUFOR\b_soldier_01.p3d"; // non-rolled sleeved version
+	uniformClass = "name of class in cfgWeapons with same item";
+	hiddenSelections[] = {"camo","insignia"};
+	hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+};
+--------------------
+(put in cfgWeapons)
+class your_class_name: Uniform_Base
+{
+	author = "your name here";
+	scope = 2;
+	scopeArsenal = 2;
+	dlc = "name of dlc"; // read cfgMods.hpp - template for more info
+	displayName = "Name that shows up in Virtual Arsenal";
+	model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";   // rolled sleeved version
+	model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d"; // non-rolled sleeved version
+	picture = "path to icon for item in .paa format";
+	class ItemInfo: UniformItem
+	{
+		uniformModel = "-";
+		uniformClass = "name of class in cfgVehicles with same item name";
+		containerClass = "supply80";
+		armor = 250;
+		mass = 1;
+	};
+};
+====================================================================================================
+NATO VEST LIGHT
+--------------------
+(put in cfgWeapons
+class your_class_name: V_PlateCarrier3_rgr
+{
+	author = "your_name_here";
+	scope = 2;
+	scopeArsenal = 2;
+	dlc = "name of dlc"; // read cfgMods.hpp - template for more info
+	displayName = "name that shows up in Virtual Arsenal";
+	picture = "path to icon for item in .paa format";
+	hiddenSelections[] = {"Camo"};
+	hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+	class ItemInfo: vestItem
+	{
+		uniformModel = "\A3\Characters_F_EPA\BLUFOR\equip_b_vest_kerry.p3d";
+		containerClass = "Supply180";
+		mass = 10;
+		armor = 700;
+		passThrough = 0.69999999;
+		hiddenSelections[] = {"Camo"};
+	};
+};
+--------------------------------------------------
+NATO VEST HEAVY
+--------------------
+(put in cfgWeapons)
+class your_class_name: V_PlateCarrierGL_rgr
+{
+	author = "your name here";
+	scope = 2;
+	scopeArsenal = 2;
+	dlc = "name of dlc"; // read cfgMods.hpp - template for more info
+	displayName = "name that shows up in Virtual Arsenal";
+	picture = "path to icon for item in .paa format";
+	hiddenSelections[] = {"Camo"};
+	hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+	class ItemInfo: vestItem
+	{
+		uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest01.p3d";
+		containerClass = "Supply180";
+		mass = 10;
+		armor = 700;
+		passThrough = 0.699999999;
+		hiddenSelections[] = {"Camo"};
+	};
+};
+====================================================================================================
+NATO BOONIE HAT
+--------------------
+(put in cfgWeapons)
+class your_class_name: H_Booniehat_khk
+{
+	author = "your name here";
+	scope = 2;
+	scopeArsenal = 2;
+	dlc = "name of dlc"; // read cfgMods.hpp - template for more info
+	displayName = "name that shows up in Virtual Arsenal";
+	model = "\A3\Characters_F\Common\booniehat";
+	picture = "path to icon for item in .paa format";
+	hiddenSelections[] = {"Camo"};
+	hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+	class ItemInfo: HeadgearItem
+	{
+		mass = 10;
+		uniformModel = "\A3\Characters_F\Common\booniehat";
+		armor = 0;
+		passThrough = 1;
+		hiddenSelections = "Camo";
+	};
+};
+====================================================================================================
+NATO BACKPACK ASSAULT PACK
+--------------------
+(put in cfgVehicles)
+class your_class_name: B_AssaultPack_mcamo
+{
+	author = "your name here";
+    scope = 2;
+    scopeArsenal = 2;
+    dlc = "name of dlc"; // read cfgMods.hpp - template for more info
+    displayName = "name that shows up in Virtual Arsenal";
+	model = "\A3\weapons_f\Ammoboxes\bags\Backpack_Compact";
+	picture = "path to icon for item in .paa format";
+	hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+	maximumLoad = 160;
+	mass = 20;
+};
+--------------------------------------------------
+NATO BACKPACK CARRYALL
+--------------------
+(put in cfgVehicles)
+class your_class_name: B_Carryall_mcamo
+{
+	author = "your name here";
+    scope = 2;
+    scopeArsenal = 2;
+    dlc = "name of dlc"; // read cfgMods.hpp - template for more info
+    displayName = "name that shows up in Virtual Arsenal";
+	model = "\A3\weapons_f\Ammoboxes\bags\Backpack_Tortila";
+	picture = "path to icon for item in .paa format";
+	hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+	maximumLoad = 320;
+	mass = 60;
+};
+--------------------------------------------------
+NATO BACKPACK KITBAG
+--------------------
+(put in cfgVehicles)
+class your_class_name: B_Kitbag_Base
+{
+	author = "your name here";
+    scope = 2;
+    scopeArsenal = 2;
+    dlc = "name of dlc"; // read cfgMods.hpp - template for more info
+    displayName = "name that shows up in Virtual Arsenal";
+	model = "\A3\weapons_f\Ammoboxes\bags\Backpack_Fast";
+	picture = "path to icon for item in .paa format";
+	hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+	maximumLoad = 280;
+	mass = 50;
+};
+====================================================================================================
+NATO HELMET PLAIN
+--------------------
+(put in cfgWeapons)
+class your_class_name: H_HelmetB
+{
+	author = "your name here";
+    scope = 2;
+    scopeArsenal = 2;
+    dlc = "name of dlc"; // read cfgMods.hpp - template for more info
+    displayName = "name that shows up in Virtual Arsenal";
+	picture = "path to icon for item in .paa format";
+    model = "\A3\Characters_F\BLUFOR\headgear_b_helmet_plain";
+    hiddenSelections[] = {"camo"};
+    hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+    class ItemInfo: HeadgearItem
+    {
+    	mass = 40;
+    	uniformModel = "\A3\Characters_F\BLUFOR\headgear_b_helmet_plain";
+    	armor = 4;
+    	passThrough = 0.5;
+    	hiddenSelections[] = {"camo"};
+    };
+};
+--------------------------------------------------
+NATO HELMET LIGHT
+--------------------
+(put in cfgWeapons)
+class your_class_name: H_HelmetB
+{
+	author = "your name here";
+	scope = 2;
+	scopeArsenal = 2;
+	dlc = "name of dlc"; // read cfgMods.hpp - template for more info
+	displayName = "name that shows up in Virtual Arsenal";
+	picture = "path to icon for item in .paa format";
+	model = "\A3\Characters_F\BLUFOR\headgear_b_helmet_plain";
+	hiddenSelections[] = {"camo"};
+	hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+	class ItemInfo: HeadgearItem
+	{
+		mass = 30;
+		uniformModel = "\A3\Characters_F\BLUFOR\headgear_b_helmet_light";
+		armor = 3;
+		passThrough = 0.5;
+		hiddenSelections[] = {"camo"};
+	};
+};
+--------------------------------------------------
+NATO HELMET ENHANCED
+--------------------
+(put in cfgWeapons)
+class your_class_name: H_HelmetB
+{
+	author = "your name here";
+	scope = 2;
+	scopeArsenal = 2;
+	displayName = "name that shows up in Virtual Arsenal";
+	picture = "path to icon for item in .paa format";
+	model = "\A3\Characters_F\BLUFOR\headgear_b_helmet_ballistic";
+	hiddenSelections[] = {"camo"};
+	hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+	class ItemInfo: HeadgearItem
+	{
+		mass = 50;
+		uniformModel = "\A3\Characters_F\BLUFOR\headgear_b_helmet_ballistic";
+		armor = 5;
+		passThrough = 0.5;
+		hiddenSelections[] = {"camo"};
+	};
+};
+====================================================================================================

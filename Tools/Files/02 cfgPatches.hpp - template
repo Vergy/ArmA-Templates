@@ -1,0 +1,23 @@
+//====================================================================================================
+// cfgPatches.hpp template
+
+class name_of_mod
+{
+    units[] = // all the classes from cfgVehicles
+    {
+		class item_class_name1, // all lines end in a comma except the last entry which ends in nothing
+		class item_class_name2, // uniform items should end in _F to differentiate between the unit and the item
+		class item_class_name3
+    };
+    weapons[] = // all the classes from cfgWeapons
+    {
+        class item_class_name1, // all lines end in a comma except the last entry which ends in nothing
+        class item_class_name2,
+        class item_class_name3
+	};
+    requiredVersion = 0.1;
+    requiredAddons[] =
+	{
+		"other_mod_name" // here you will put all .pbo files that you are pulling other classes from
+	};
+};
