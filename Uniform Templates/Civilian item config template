@@ -1,0 +1,119 @@
+Simply copy and paste the code that you need to use for the item you are trying to create.
+
+====================================================================================================
+// (UNIFORMS)
+{
+PANTS & SHIRT
+	(put in cfgVehicles)
+	class your_class_name_F: C_Marshal_F // don't forget to put the _F at the end of your class name
+	{
+		author = "your name here";
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "name of dlc"; // read cfgMods.hpp - template for more info
+		displayName = "name that shows up in Virtual Arsenal";
+		model = "\A3\Characters_F\Civil\c_poloshirtpants.p3d";
+		uniformClass = "name of class in cfgWeapons with same item";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+	};
+	(put in cfgWeapons)
+	class your_class_name: Uniform_Base
+	{
+		author = "your name here";
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "name of dlc"; // read cfgMods.hpp - template for more info
+		displayName = "Name that shows up in Virtual Arsenal";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_driver_F.p3d";
+		picture = "\A3\characters_f_kart\data\ui\icon_U_Marshall_ca.paa";
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "name of class in cfgVehicles with same item name";
+			containerClass = "supply20";
+			mass = 40;
+		};
+	};
+}
+
+{
+SHORTS & SHIRT
+	(put in cfgVehicles)
+	class your_class_name_F: C_man_polo_1_F // don't forget to put the _F at the end of your class name
+	{
+		author = "your name here";
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "name of dlc"; // read cfgMods.hpp - template for more info
+		displayName = "name that shows up in Virtual Arsenal";
+		model = "\A3\Characters_F\Civil\c_poloshirt.p3d";
+		uniformClass = "name of class in cfgWeapons with same item";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"path to image file in .paa format"}; // \A3\Characters_F\Civil\Data\c_poloshirt_1_co.paa
+	};
+	(put in cfgWeapons)
+	class your_class_name: Uniform_Base
+	{
+		author = "your name here";
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "name of dlc"; // read cfgMods.hpp - template for more info
+		displayName = "Name that shows up in Virtual Arsenal";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_civilian_F.p3d";
+		picture = "\A3\characters_f\data\ui\icon_U_C_Poloshirt_blue_ca.paa";
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "name of class in cfgVehicles with same item name";
+			containerClass = "supply20";
+			mass = 40;
+		};
+	};
+}
+====================================================================================================
+// (VESTS)
+{
+TACTICAL VEST
+	(put in cfgWeapons
+	class your_class_name: V_TacVest_blk
+	{
+		author = "your_name_here";
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "name of dlc"; // read cfgMods.hpp - template for more info
+		displayName = "name that shows up in Virtual Arsenal";
+		picture = "path to icon for item in .paa format"; // \A3\characters_f\Data\UI\icon_V_TacVest_blk_CA.paa
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"path to image file in .paa format"}; // \A3\Characters_F\Common\Data\tacticalvest_black_co.paa
+		class ItemInfo: vestItem
+		{
+			uniformModel = "\A3\Characters_F\Common\equip_tacticalvest";
+			containerClass = "Supply100";
+			hiddenSelections[] = {"Camo"};
+		};
+	};
+}
+
+{
+RANGEMASTER BELT
+	(put in cfgWeapons
+	class your_class_name: V_Rangemaster_belt
+	{
+		author = "your_name_here";
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "name of dlc"; // read cfgMods.hpp - template for more info
+		displayName = "name that shows up in Virtual Arsenal";
+		picture = "\A3\Characters_F\data\ui\icon_V_Belt_CA.paa";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"path to image file in .paa format"}; // \A3\Characters_F\Common\Data\tacticalvest_black_co.paa
+		class ItemInfo: vestItem
+		{
+			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_belt";
+			containerClass = "Supply40";
+			hiddenSelections[] = {"Camo"};
+		};
+	};
+}
+====================================================================================================
