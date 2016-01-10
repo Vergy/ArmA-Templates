@@ -1,0 +1,271 @@
+Simply copy and paste the code that you need to use for the item you are trying to create.
+
+====================================================================================================
+// (UNIFORMS)
+UNIFORM (RS & SL) {
+	(put in cfgVehicles)
+	class your_class_name_F: B_Soldier_base_F {
+		author = "your name here";
+		displayName  = "name that shows up in Virtual Arsenal";
+		dlc = "name of dlc class";
+		hiddenSelections[] = {"camo","insignia"};
+		hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+		model = "\A3\characters_F\BLUFOR\b_soldier_01.p3d"; // non-rolled sleeved version
+		model = "\A3\characters_F\BLUFOR\b_soldier_03.p3d"; // rolled sleeved version
+		scope = 2;
+		scopeArsenal = 2;
+		uniformClass = "name of class in cfgWeapons with same item";
+	};
+	(put in cfgWeapons)
+	class your_class_name: Uniform_Base {
+		author = "your name here";
+		displayName = "Name that shows up in Virtual Arsenal";
+		dlc = "name of dlc class";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver"; // rolled sleeved version
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d"; // non-rolled sleeved version
+		picture = "path to icon for item in .paa format";
+		scope = 2;
+		scopeArsenal = 2;
+		class ItemInfo: UniformItem {
+			containerClass = "supply60";
+			mass = 40;
+			uniformClass = "name of class in cfgVehicles with same item name";
+			uniformModel = "-";
+		};
+	};
+}
+GHILLIE SUIT {
+	(put in cfgVehicles)
+	class your_class_name_F: O_ghillie_base_F {
+		author = "your name here";
+		displayName = "name that shows up in Virtual Arsenal";
+		dlc = "name of dlc class";
+		hiddenSelections[] = {"camo","camo3","camo4"};
+		hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+		// \A3\Characters_F_Mark\OPFOR\Data\ghillie_coverall_csat_co.paa
+		// \A3\Characters_F_Mark\Common\Data\ghillie_threads_lsh_ca.paa
+		// \A3\Characters_F_Mark\Common\Data\ghillie_threads_5LOD_lsh_co.paa"};
+		model = "\A3\Characters_F_Mark\OPFOR\o_fullghillie_f.p3d";
+		scope = 2;
+		scopeArsenal = 2;
+		uniformClass = "name of class in cfgWeapons with same item name";
+	};
+	(put in cfgWeapons)
+	class your_class_name: Uniform_Base {
+		author  = "your name here";
+		displayName = "name that shows up in Virtual Arsenal";
+		dlc = "name of dlc class";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		picture = "path to icon for item in .paa format";
+		scope = 2;
+		scoperArsenal = 2;
+		class ItemInfo: UniformItem {
+			containerClass = "supply60";
+			mass = 100;
+			uniformClass = "name of class in cfgVehicles with same item name";
+			uniformModel = "-";
+		}:
+	};
+}
+====================================================================================================
+// (VESTS)
+NATO VEST HEAVY {
+	(put in cfgWeapons)
+	class your_class_name: V_PlateCarrierGL_rgr {
+		author = "your name here";
+		displayName = "name that shows up in Virtual Arsenal";
+		dlc = "name of dlc";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+		picture = "path to icon for item in .paa format";
+		scope = 2;
+		scopeArsenal = 2;
+		class ItemInfo: vestItem {
+			containerClass = "Supply140";
+			hiddenSelections[] = {"Camo"};
+			mass = 100;
+			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest01.p3d";
+		};
+	};
+}
+NATO VEST LIGHT {
+	(put in cfgWeapons
+	class your_class_name: V_PlateCarrier3_rgr {
+		author = "your_name_here";
+		displayName = "name that shows up in Virtual Arsenal";
+		dlc = "name of dlc";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+		picture = "path to icon for item in .paa format";
+		scope = 2;
+		scopeArsenal = 2;
+		class ItemInfo: vestItem {
+			containerClass = "Supply140";
+			hiddenSelections[] = {"Camo"};
+			mass = 100;
+			uniformModel = "\A3\Characters_F_EPA\BLUFOR\equip_b_vest_kerry.p3d";
+		};
+	};
+}
+RANGEMASTER BELT {
+	(put in cfgWeapons
+	class your_class_name: V_Rangemaster_belt {
+		author = "your_name_here";
+		scope = 2;
+		scopeArsenal = 2;
+		dlc = "name of dlc";
+		displayName = "name that shows up in Virtual Arsenal";
+		picture = "\A3\Characters_F\data\ui\icon_V_Belt_CA.paa";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+		class ItemInfo: vestItem {
+			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_belt";
+			containerClass = "Supply40";
+			hiddenSelections[] = {"Camo"};
+		};
+	};
+}
+====================================================================================================
+// (HEADGEAR)
+BOONIE HAT {
+	(put in cfgWeapons)
+	class your_class_name: H_Booniehat_khk {
+		author = "your name here";
+		displayName = "name that shows up in Virtual Arsenal";
+		dlc = "name of dlc";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+		model = "\A3\Characters_F\Common\booniehat";
+		picture = "path to icon for item in .paa format";
+		scope = 2;
+		scopeArsenal = 2;
+		class ItemInfo: HeadgearItem {
+			hiddenSelections = "Camo";
+			mass = 10;
+			uniformModel = "\A3\Characters_F\Common\booniehat";
+		};
+	};
+}
+NATO HELMET PLAIN {
+	(put in cfgWeapons)
+	class your_class_name: H_HelmetB {
+		author = "your name here";
+    	displayName = "name that shows up in Virtual Arsenal";
+    	dlc = "name of dlc";
+    	hiddenSelections[] = {"camo"};
+    	hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+    	model = "\A3\Characters_F\BLUFOR\headgear_b_helmet_plain";
+		picture = "path to icon for item in .paa format";
+    	scope = 2;
+    	scopeArsenal = 2;
+    	class ItemInfo: HeadgearItem {
+    		hiddenSelections[] = {"camo"};
+    		mass = 30;
+    		uniformModel = "\A3\Characters_F\BLUFOR\headgear_b_helmet_plain";
+    	};
+	};
+}
+NATO HELMET LIGHT {
+	(put in cfgWeapons)
+	class your_class_name: H_HelmetB {
+		author = "your name here";
+		displayName = "name that shows up in Virtual Arsenal";
+		dlc = "name of dlc";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+		model = "\A3\Characters_F\BLUFOR\headgear_b_helmet_plain";
+		picture = "path to icon for item in .paa format";
+		scope = 2;
+		scopeArsenal = 2;
+		class ItemInfo: HeadgearItem {
+			hiddenSelections[] = {"camo"};
+			mass = 30;
+			uniformModel = "\A3\Characters_F\BLUFOR\headgear_b_helmet_light";
+		};
+	};
+}
+NATO HELMET ENHANCED {
+	(put in cfgWeapons)
+	class your_class_name: H_HelmetB {
+		author = "your name here";
+		displayName = "name that shows up in Virtual Arsenal";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+		model = "\A3\Characters_F\BLUFOR\headgear_b_helmet_ballistic";
+		picture = "path to icon for item in .paa format";
+		scope = 2;
+		scopeArsenal = 2;
+		class ItemInfo: HeadgearItem {
+			hiddenSelections[] = {"camo"};
+			mass = 50;
+			uniformModel = "\A3\Characters_F\BLUFOR\headgear_b_helmet_ballistic";
+		};
+	};
+}
+BERET {
+	(put in cfgWeapons)
+	class your_class_name: H_Beret_02 {
+		author = "your name here";
+		displayName = "name that shows up in Virtual Arsenal";
+		dlc = "name of dlc";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"path to image file in .paa format"}; //hiddenSelectionsTextures[] = {"\A3\Characters_F_EPB\BLUFOR\Data\headgear_beret02_co.paa"};
+		model = "\A3\Characters_F_EPB\BLUFOR\headgear_beret02";
+		picture = "path to icon for item in .paa format"; //picture = "\A3\characters_f_EPB\BLUFOR\Data\UI\icon_H_beret02_ca.paa";
+		scope = 2;
+		scopeArsenal = 2;
+		class ItemInfo: HeadgearItem {
+			hiddenSelections = "Camo";
+			mass = 6;
+			uniformModel = "\A3\Characters_F_EPB\BLUFOR\headgear_beret02";
+		};
+	};
+}
+====================================================================================================
+// (BACKPACKS)
+ASSAULT PACK {
+	(put in cfgVehicles)
+	class your_class_name: B_AssaultPack_Base {
+		author = "your name here";
+		hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+		mass = 20;
+		maximumLoad = 160;
+		model = "\A3\weapons_f\Ammoboxes\bags\Backpack_Compact";
+		picture = "path to icon for item in .paa format";
+    	displayName = "name that shows up in Virtual Arsenal";
+    	dlc = "name of dlc";
+    	scope = 2;
+    	scopeArsenal = 2;
+	};
+}
+CARRYALL {
+	(put in cfgVehicles)
+	class your_class_name: B_Carryall_Base {
+		author = "your name here";
+		hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+		mass = 60;
+		maximumLoad = 320;
+		model = "\A3\weapons_f\Ammoboxes\bags\Backpack_Tortila";
+		picture = "path to icon for item in .paa format";
+    	displayName = "name that shows up in Virtual Arsenal";
+    	dlc = "name of dlc";
+    	scope = 2;
+    	scopeArsenal = 2;
+	};
+}
+KITBAG {
+	(put in cfgVehicles)
+	class your_class_name: B_Kitbag_Base {
+		author = "your name here";
+    	displayName = "name that shows up in Virtual Arsenal";
+    	dlc = "name of dlc";
+		hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+		mass = 50;
+		maximumLoad = 280;
+		model = "\A3\weapons_f\Ammoboxes\bags\Backpack_Fast";
+		picture = "path to icon for item in .paa format";
+    	scope = 2;
+    	scopeArsenal = 2;
+	};
+}
+====================================================================================================

@@ -1,0 +1,37 @@
+Simply copy and paste the code that you need to use for the item you are trying to create.
+
+====================================================================================================
+// (UNIFORMS)
+UNIFORM (SL) {
+	(put in cfgVehicles)
+	class your_class_name_F: I_soldier_F {
+		author = "your name here";
+		displayName  = "name that shows up in Virtual Arsenal";
+		dlc = "name of dlc class";
+		hiddenSelections[] = {"camo","insignia"};
+		hiddenSelectionsTextures[] = {"path to image file in .paa format"};
+		model = "\A3\Characters_F_Beta\INDEP\ia_soldier_01.p3d"; // non-rolled sleeved version
+		model = ""; // rolled sleeved version
+		scope = 2;
+		scopeArsenal = 2;
+		uniformClass = "name of class in cfgWeapons with same item";
+	};
+	(put in cfgWeapons)
+	class your_class_name: Uniform_Base {
+		author = "your name here";
+		displayName = "Name that shows up in Virtual Arsenal";
+		dlc = "name of dlc class";
+		model = ""; // rolled sleeved version
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d"; // non-rolled sleeved version
+		picture = "path to icon for item in .paa format";
+		scope = 2;
+		scopeArsenal = 2;
+		class ItemInfo: UniformItem {
+			containerClass = "supply40";
+			mass = 40;
+			type = 801
+			uniformClass = "name of class in cfgVehicles with same item name";
+			uniformModel = "-";
+		};
+	};
+}
